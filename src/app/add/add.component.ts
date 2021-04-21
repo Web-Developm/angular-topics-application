@@ -17,21 +17,27 @@ export class AddComponent implements OnInit {
   public data: FormGroup = this.fs.data;
 
   add() {
-    let temp = new Structure();
+    if(this.data.valid==true)
+    {
+      let temp = new Structure();
 
-    temp.id = this.data.controls['id'].value;
-    temp.name = this.data.controls['name'].value;
-    temp.salary = this.data.controls['salary'].value;
-    temp.age = this.data.controls['age'].value;
+      temp.id = this.data.controls['id'].value;
+      temp.name = this.data.controls['name'].value;
+      temp.salary = this.data.controls['salary'].value;
+      temp.age = this.data.controls['age'].value;
 
-    this.fs.add(temp).subscribe(
-      data => {
-        console.log(data);
-        alert("Successfully added");
-      }
-    )
+      this.fs.add(temp).subscribe(
+        data => {
+          console.log(data);
+          alert("Successfully added");
+        }
+      )
+      this.data.reset();
+    }
+    else{
+      alert("Please fill the fields");
+    }
 
-    this.data.reset();
   }
 
 
@@ -41,6 +47,7 @@ export class AddComponent implements OnInit {
 
 
   ngOnInit(): void {
+    console.log(this.data.valid);
   }
 
 }

@@ -13,10 +13,7 @@ export class AppComponent {
 
   public content=this.fs.content;
 
-  display()
-  {
-    console.log(this.content);
-  }
+
 
   constructor(private fs:FormsService)
   {

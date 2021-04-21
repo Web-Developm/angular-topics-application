@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validator } from '@angular/forms';
 import { Structure } from '../str';
 import { FormsService } from '../forms.service';
 
@@ -27,31 +27,50 @@ export class UpdateComponent implements OnInit {
   }
 
   update1(info: any, index: any) {
-    this.data.setValue({
-      id: info.id,
-      name: info.name,
-      salary: info.salary,
-      age: info.age
-    });
+
+    let temp = confirm("Are confirm update the value");
+
+    if (temp == true) {
+      this.data.setValue({
+        id: info.id,
+        name: info.name,
+        salary: info.salary,
+        age: info.age
+      });
+    }
+
+    else {
+      alert("Stop");
+    }
+
   }
 
   update2() {
-    let info = new Structure;
-    info.id = this.data.controls['id'].value;
-    info.name = this.data.controls['name'].value;
-    info.salary = this.data.controls['salary'].value;
-    info.age = this.data.controls['age'].value;
 
-    let id = Number(info.id);
+    if (this.data.valid == true) {
+      let info = new Structure;
+      info.id = this.data.controls['id'].value;
+      info.name = this.data.controls['name'].value;
+      info.salary = this.data.controls['salary'].value;
+      info.age = this.data.controls['age'].value;
 
-    this.fs.edit(info, id).subscribe(
-      data => {
-        console.log(data);
-        this.get();
-      }
-    )
+      let id = Number(info.id);
 
-    this.data.reset();
+      this.fs.edit(info, id).subscribe(
+        data => {
+          console.log(data);
+          alert("Successfully updated");
+          this.get();
+        }
+      )
+
+      this.data.reset();
+    }
+
+    else{
+      alert("Plese fill the fields");
+    }
+
 
 
   }

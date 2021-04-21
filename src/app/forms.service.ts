@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable,OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Structure } from '../app/str';
@@ -44,6 +44,11 @@ export class FormsService {
   //delete
   delete(id: number): Observable<any> {
     return this.http.delete(`${this.url}/${id}`);
+  }
+
+  ngOnInit()
+  {
+    this.data;
   }
 
 }

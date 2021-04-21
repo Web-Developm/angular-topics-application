@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpParams } from '@angular/common/http';
+import {Structure} from '../app/str';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -9,10 +11,15 @@ export class FormsService {
 
   constructor(private http:HttpClient) { }
 
+  url="http://localhost:5555/data/";
 
 
-
-
+  data = new FormGroup({
+    id: new FormControl(''),
+    name: new FormControl(''),
+    salary: new FormControl(''),
+    age: new FormControl('')
+  });
 
 
   //get data
@@ -21,5 +28,16 @@ export class FormsService {
   }
 
   //add data
+  add(temp:Structure)
+  {
+    return this.http.post("http://localhost:5555/data",temp);
+  }
+
+
+
+  //delete
+  delete(id:number):Observable<any>{
+    return this.http.delete(`${this.url}/${id}`);
+  }
 
 }

@@ -1,4 +1,23 @@
-<div class="container">
-  <p>delete works!</p>
-</div>
+<div class="container mt-4">
+  <table class="table">
+    <thead class="table-light text-secondary">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Age</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
 
+    <tbody *ngFor="let item of items; let i=index">
+      <tr>
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.salary}}</td>
+        <td>{{item.age}}</td>
+        <td><button (click)="delete(i)" type="button" class="btn btn-dark">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

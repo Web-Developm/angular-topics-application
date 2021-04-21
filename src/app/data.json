@@ -1,10 +1,40 @@
 {
-  "data":[
+  "data": [
     {
-      "id":0,
-      "name":"jones",
-      "salary":232323,
-      "age":23
-  }
-]
+      "id": "0",
+      "name": "KAYLING",
+      "salary": "6000.00",
+      "age": "22"
+    },
+    {
+      "id": "1",
+      "name": "BLAZE ",
+      "salary": "2750.00",
+      "age": "25"
+    },
+    {
+      "id": "2",
+      "name": "SANDRINE ",
+      "salary": "900.00",
+      "age": "20"
+    },
+    {
+      "id": "3",
+      "name": "ADELYN ",
+      "salary": "1700.00 ",
+      "age": "19"
+    },
+    {
+      "id": "4",
+      "name": "WADE ",
+      "salary": "1350.00",
+      "age": "18"
+    },
+    {
+      "id": "5",
+      "name": "MADDEN ",
+      "salary": "1350.00",
+      "age": "19"
+    }
+  ]
 }

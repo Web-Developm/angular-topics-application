@@ -1,17 +1,25 @@
 import { Injectable } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { Observable, of } from 'rxjs';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FormsService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
-  data = new FormGroup({
-    id: new FormControl(''),
-    name: new FormControl(''),
-    salary: new FormControl(''),
-    age: new FormControl('')
-  })
+
+
+
+
+
+
+  //get data
+  info():Observable<any>{
+    return this.http.get("http://localhost:5555/data")
+  }
+
+  //add data
+
 }

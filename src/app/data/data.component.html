@@ -1,4 +1,22 @@
-<div class="container">
-  <p>data works!</p>
+<div class="container mt-3">
+  <table class="table">
+    <thead class="table-light text-secondary">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+
+    <tbody *ngFor="let item of items">
+      <tr>
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.salary}}</td>
+        <td>{{item.age}}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 

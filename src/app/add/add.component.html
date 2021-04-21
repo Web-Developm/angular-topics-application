@@ -1,4 +1,29 @@
-<div class="container">
-  <p>add works!</p>
-</div>
+<div class="container mt-4">
+  <h1 class="display-6 mb-3">Add Form</h1>
+  <form [formGroup]="data">
 
+    <div class="form-floating mb-4">
+      <input type="text" name="id" id="id" class="form-control" placeholder="Id" formControlName="id">
+      <label for="id">Id</label>
+    </div>
+
+    <div class="form-floating mb-4">
+      <input type="text" name="name" id="name" class="form-control" placeholder="Name" formControlName="name">
+      <label for="name">Name</label>
+    </div>
+
+    <div class="form-floating mb-4">
+      <input type="text" name="salary" id="salary" class="form-control" placeholder="Salary" formControlName="salary">
+      <label for="salary">Salary</label>
+    </div>
+
+    <div class="form-floating mb-4">
+      <input type="text" name="age" id="age" class="form-control" placeholder="Age" formControlName="age">
+      <label for="age">Age</label>
+    </div>
+
+    <div class="d-grid gap-2">
+      <button (click)="display()" type="button" class="btn btn-outline-dark">Submit</button>
+    </div>
+  </form>
+</div>

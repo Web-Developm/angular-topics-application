@@ -14,7 +14,7 @@ export class AddComponent implements OnInit {
 
   constructor(private fs: FormsService) { }
 
-  public data:FormGroup=this.fs.data;
+  public data: FormGroup = this.fs.data;
 
   add() {
     let temp = new Structure();
@@ -25,7 +25,7 @@ export class AddComponent implements OnInit {
     temp.age = this.data.controls['age'].value;
 
     this.fs.add(temp).subscribe(
-      data=>{
+      data => {
         console.log(data);
         alert("Successfully added");
       }

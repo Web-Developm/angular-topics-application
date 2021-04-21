@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {FormsService} from '../forms.service';
-import {Structure} from '../str';
+import { FormsService } from '../forms.service';
+import { Structure } from '../str';
 import { HttpResponse, HttpHeaders, HttpClient } from '@angular/common/http';
 
 @Component({
@@ -10,24 +10,22 @@ import { HttpResponse, HttpHeaders, HttpClient } from '@angular/common/http';
 })
 export class DeleteComponent implements OnInit {
 
-  constructor(private fs:FormsService, private http:HttpClient) { }
+  constructor(private fs: FormsService, private http: HttpClient) { }
 
-  public items!:Structure[];
+  public items!: Structure[];
 
-  get()
-  {
+  get() {
     this.fs.info().subscribe(
-      data=>{
-        this.items=data;
+      data => {
+        this.items = data;
         console.log(data);
       }
     )
   }
 
-  delete(id:any)
-  {
+  delete(id: any) {
     this.fs.delete(id).subscribe(
-      data=>{
+      data => {
         console.log(data);
         this.get();
       }

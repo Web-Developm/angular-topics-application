@@ -1,28 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import {FormsService} from '../forms.service';
+import { FormsService } from '../forms.service';
 import { FormControl, FormGroup } from '@angular/forms';
 import { HttpResponse, HttpHeaders, HttpClient } from '@angular/common/http';
-import {Structure} from '../str';
+import { Structure } from '../str';
 
 @Component({
   selector: 'app-data',
   templateUrl: './data.component.html',
   styleUrls: ['./data.component.css'],
-  providers:[FormsService]
+  providers: [FormsService]
 })
 export class DataComponent implements OnInit {
 
-  constructor(private fs:FormsService, private http:HttpClient) { }
+  constructor(private fs: FormsService, private http: HttpClient) { }
 
-  public items!:Structure[];
+  public items!: Structure[];
 
 
 
-  get()
-  {
+  get() {
     this.fs.info().subscribe(
-      data=>{
-        this.items=data;
+      data => {
+        this.items = data;
         console.log(data);
       }
     )

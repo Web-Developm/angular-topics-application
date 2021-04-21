@@ -7,7 +7,8 @@
       <label for="id" [ngClass]="{'text-dark':'true'}">Id</label>
 
       <div class="alert alert-warning mt-2"
-        *ngIf="data.controls['id'].hasError('required') && data.controls['id'].touched" [ngStyle]="{'color':'black', 'background-color':'#fbe0c4'}">
+        *ngIf="data.controls['id'].hasError('required') && data.controls['id'].touched"
+        [ngStyle]="{'color':'black', 'background-color':'#fbe0c4'}">
         Id required
       </div>
 
@@ -17,8 +18,8 @@
       <input type="text" name="name" id="name" class="form-control" placeholder="Name" formControlName="name">
       <label for="name" [ngClass]="{'text-dark':'true'}">Name</label>
 
-      <div class="alert  mt-2"
-        *ngIf="data.controls['name'].hasError('required') && data.controls['name'].touched" [ngStyle]="{'color':'black','background-color':'#fbe0c4'}">
+      <div class="alert  mt-2" *ngIf="data.controls['name'].hasError('required') && data.controls['name'].touched"
+        [ngStyle]="{'color':'black','background-color':'#fbe0c4'}">
         Name required
       </div>
 
@@ -29,7 +30,8 @@
       <label for="salary" [ngClass]="{'text-dark':'true'}">Salary</label>
 
       <div class="alert alert-warning mt-2"
-        *ngIf="data.controls['salary'].hasError('required') && data.controls['salary'].touched" [ngStyle]="{'color':'black', 'background-color':'#fbe0c4'}">
+        *ngIf="data.controls['salary'].hasError('required') && data.controls['salary'].touched"
+        [ngStyle]="{'color':'black', 'background-color':'#fbe0c4'}">
         Salary required
       </div>
     </div>
@@ -39,7 +41,8 @@
       <label for="age" [ngClass]="{'text-dark':'true'}">Age</label>
 
       <div class="alert alert-warning mt-2"
-        *ngIf="data.controls['age'].hasError('required') && data.controls['age'].touched" [ngStyle]="{'color':'black', 'background-color':'#fbe0c4'}">
+        *ngIf="data.controls['age'].hasError('required') && data.controls['age'].touched"
+        [ngStyle]="{'color':'black', 'background-color':'#fbe0c4'}">
         Age required
       </div>
     </div>

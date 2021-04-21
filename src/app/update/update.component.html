@@ -1,4 +1,52 @@
-<div class="container">
-  <p>update works!</p>
+<div class="container mt-4">
+  <h1 class="display-6 mb-3">Update</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Age</th>
+        <th>Update</th>
+      </tr>
+
+    </thead>
+
+    <tbody *ngFor="let item of items; let i=index">
+      <tr>
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.salary}}</td>
+        <td>{{item.age}}</td>
+        <td><button (click)="update1(item,i)" type="button" class="btn btn-sm btn-outline-dark">Update</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <form [formGroup]="data" class="mt-4">
+    <div class="form-floating mb-4">
+      <input type="text" class="form-control" name="id" id="id" placeholder="Id" formControlName="id">
+      <label for="id">Id</label>
+    </div>
+
+    <div class="form-floating mb-4">
+      <input type="text" class="form-control" name="name" id="name" placeholder="name" formArrayName="name">
+      <label for="name">Name</label>
+    </div>
+
+    <div class="form-floating mb-4">
+      <input type="text" class="form-control" name="salary" id="salary" placeholder="salary" formControlName="salary">
+      <label for="salary">Salary</label>
+    </div>
+
+    <div class="form-floating mb-4">
+      <input type="text" class="form-control" name="age" id="age" placeholder="age" formControlName="age">
+      <label for="age">Age</label>
+    </div>
+
+    <div class="d-grid gap-2 mb-5">
+      <button type="button" class="btn btn-outline-dark">Update</button>
+    </div>
+  </form>
 </div>
 

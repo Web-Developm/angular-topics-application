@@ -33,6 +33,11 @@ export class FormsService {
     return this.http.post("http://localhost:5555/data",temp);
   }
 
+  //edit
+  edit(info:Structure,id:number)
+  {
+    return this.http.put(`${this.url}/${id}`,info);
+  }
 
 
   //delete

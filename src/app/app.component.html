@@ -26,6 +26,13 @@
   </div>
 </nav>
 
-<h5 class="display-6 text-center mt-3">{{today|date:'full'}}</h5>
+<div class="container">
+  <h5 class="display-6 text-center mt-3">{{today|date:'full'}}</h5>
+
+  <input type="text" class="form-control" [(ngModel)]="content">
+  <p class="text-center">{{content}}</p>
+</div>
+
+
 
 <router-outlet></router-outlet>

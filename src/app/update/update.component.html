@@ -16,8 +16,8 @@
     <tbody *ngFor="let item of items; let i=index">
       <tr>
         <td>{{item.id}}</td>
-        <td>{{item.name}}</td>
-        <td>{{item.salary}}</td>
+        <td>{{item.name |uppercase}}</td>
+        <td>{{item.salary | currency:'INR':'symbol'}}</td>
         <td>{{item.age}}</td>
         <td><button (click)="update1(item,i)" type="button" class="btn btn-sm btn-outline-dark">Update</button></td>
       </tr>

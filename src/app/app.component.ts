@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DatePipe } from '@angular/common';
+import {FormsService} from '../app/forms.service';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,12 @@ import { DatePipe } from '@angular/common';
 })
 export class AppComponent {
   title = 'all-topics-application';
-  today:number=Date.now();
+  today: number = Date.now();
+
+  public content=this.fs.content;
+
+  constructor(private fs:FormsService)
+  {
+
+  }
 }

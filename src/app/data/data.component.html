@@ -12,9 +12,9 @@
 
     <tbody *ngFor="let item of items">
       <tr>
-        <td>{{item.id}}</td>
+        <td>{{item.id| uppercase}}</td>
         <td>{{item.name}}</td>
-        <td>{{item.salary}}</td>
+        <td>{{item.salary| currency:'INR':'symbol'}}</td>
         <td>{{item.age}}</td>
       </tr>
     </tbody>

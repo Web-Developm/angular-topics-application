@@ -21,6 +21,9 @@ export class FormsService {
     age: new FormControl('',[Validators.required,Validators.minLength(2)])
   });
 
+  content:any;
+
+
 
   //get data
   info():Observable<any>{

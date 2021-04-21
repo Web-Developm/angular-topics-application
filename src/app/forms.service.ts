@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import {Structure} from '../app/str';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup,Validators} from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -15,10 +15,10 @@ export class FormsService {
 
 
   data = new FormGroup({
-    id: new FormControl(''),
-    name: new FormControl(''),
-    salary: new FormControl(''),
-    age: new FormControl('')
+    id: new FormControl('',[Validators.required,Validators.minLength(2)]),
+    name: new FormControl('',[Validators.required,Validators.minLength(4)]),
+    salary: new FormControl('',[Validators.required,Validators.minLength(6)]),
+    age: new FormControl('',[Validators.required,Validators.minLength(2)])
   });
 
 

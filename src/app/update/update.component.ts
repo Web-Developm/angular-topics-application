@@ -37,6 +37,28 @@ export class UpdateComponent implements OnInit {
     });
   }
 
+  update2()
+  {
+    let info=new Structure;
+    info.id=this.data.controls['id'].value;
+    info.name=this.data.controls['name'].value;
+    info.salary=this.data.controls['salary'].value;
+    info.age=this.data.controls['age'].value;
+
+    let id=Number(info.id);
+
+    this.fs.edit(info,id).subscribe(
+      data=>{
+        console.log(data);
+        this.get();
+      }
+    )
+
+    this.data.reset();
+
+
+  }
+
 
 
   ngOnInit(): void {

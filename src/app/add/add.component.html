@@ -5,25 +5,47 @@
     <div class="form-floating mb-4">
       <input type="text" name="id" id="id" class="form-control" placeholder="Id" formControlName="id">
       <label for="id">Id</label>
+
+      <div class="alert alert-warning mt-2"
+        *ngIf="data.controls['id'].hasError('required') && data.controls['id'].touched" [ngStyle]="{'color':'black', 'background-color':'#fbe0c4'}">
+        Id required
+      </div>
+
     </div>
 
     <div class="form-floating mb-4">
       <input type="text" name="name" id="name" class="form-control" placeholder="Name" formControlName="name">
       <label for="name">Name</label>
+
+      <div class="alert  mt-2"
+        *ngIf="data.controls['name'].hasError('required') && data.controls['name'].touched" [ngStyle]="{'color':'black','background-color':'#fbe0c4'}">
+        Name required
+      </div>
+
     </div>
 
     <div class="form-floating mb-4">
       <input type="text" name="salary" id="salary" class="form-control" placeholder="Salary" formControlName="salary">
       <label for="salary">Salary</label>
+
+      <div class="alert alert-warning mt-2"
+        *ngIf="data.controls['salary'].hasError('required') && data.controls['salary'].touched" [ngStyle]="{'color':'black', 'background-color':'#fbe0c4'}">
+        Salary required
+      </div>
     </div>
 
     <div class="form-floating mb-4">
       <input type="text" name="age" id="age" class="form-control" placeholder="Age" formControlName="age">
       <label for="age">Age</label>
+
+      <div class="alert alert-warning mt-2"
+        *ngIf="data.controls['age'].hasError('required') && data.controls['age'].touched" [ngStyle]="{'color':'black', 'background-color':'#fbe0c4'}">
+        Age required
+      </div>
     </div>
 
-    <div class="d-grid gap-2">
-      <button (click)="add()" type="button" class="btn btn-outline-dark">Submit</button>
+    <div class="d-grid gap-2 mb-4">
+      <button (click)="add()" [disabled]="data.invalid" type="button" class="btn btn-outline-dark">Submit</button>
     </div>
   </form>
 </div>

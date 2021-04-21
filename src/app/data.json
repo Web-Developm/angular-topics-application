@@ -32,9 +32,15 @@
     },
     {
       "id": "5",
-      "name": "MADDEN ",
+      "name": "JULIUS",
       "salary": "1350.00",
       "age": "19"
+    },
+    {
+      "id": "6",
+      "name": "MARKER",
+      "salary": "1400.00",
+      "age": "18"
     }
   ]
 }

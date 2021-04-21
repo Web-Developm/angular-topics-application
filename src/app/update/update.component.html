@@ -30,7 +30,7 @@
     </div>
 
     <div class="form-floating mb-4">
-      <input type="text" class="form-control" name="name" id="name" placeholder="name" formArrayName="name">
+      <input type="text" class="form-control" name="name" id="name" placeholder="name" formControlName="name">
       <label for="name">Name</label>
     </div>
 
@@ -45,7 +45,7 @@
     </div>
 
     <div class="d-grid gap-2 mb-5">
-      <button type="button" class="btn btn-outline-dark">Update</button>
+      <button (click)="update2()" [disabled]="data.invalid" type="button" class="btn btn-outline-dark">Update</button>
     </div>
   </form>
 </div>

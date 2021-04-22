@@ -1,25 +1,35 @@
-import { Injectable,OnInit } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Structure } from '../app/str';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FormsService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private fb: FormBuilder) { }
 
-  url = "http://localhost:5555/data/";
+  data = this.fb.group({
+    id: ['', [Validators.required, Validators.minLength(1)]],
+    name: ['', [Validators.required, Validators.minLength(4)]],
+    salary: ['', [Validators.required, Validators.maxLength(10)]],
+    age: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(2)]]
+  })
 
 
-  data = new FormGroup({
+  /*data = new FormGroup({
     id: new FormControl('', [Validators.required, Validators.minLength(2)]),
     name: new FormControl('', [Validators.required, Validators.minLength(4)]),
     salary: new FormControl('', [Validators.required, Validators.minLength(6)]),
     age: new FormControl('', [Validators.required, Validators.minLength(2)])
-  });
+  });*/
+
+  url = "http://localhost:5555/data/";
+
+
+
 
   content: any;
 
@@ -42,12 +52,11 @@ export class FormsService {
 
 
   //delete
-  delete(id: number): Observable<any> {
+  delete(id: any): Observable<any> {
     return this.http.delete(`${this.url}/${id}`);
   }
 
-  ngOnInit()
-  {
+  ngOnInit() {
     this.data;
   }
 

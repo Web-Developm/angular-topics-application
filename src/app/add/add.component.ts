@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { FormsService } from '../forms.service';
-import { FormControl, FormGroup } from '@angular/forms';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { Structure } from '../str';
 
 @Component({
@@ -17,37 +16,33 @@ export class AddComponent implements OnInit {
   public data: FormGroup = this.fs.data;
 
   add() {
-    if(this.data.valid==true)
-    {
-      let temp = new Structure();
 
-      temp.id = this.data.controls['id'].value;
-      temp.name = this.data.controls['name'].value;
-      temp.salary = this.data.controls['salary'].value;
-      temp.age = this.data.controls['age'].value;
+    let temp = new Structure();
 
-      this.fs.add(temp).subscribe(
-        data => {
-          console.log(data);
-          alert("Successfully added");
-        }
-      )
-      this.data.reset();
-    }
-    else{
-      alert("Please fill the fields");
-    }
+    temp.id = this.data.controls['id'].value;
+    temp.name = this.data.controls['name'].value;
+    temp.salary = this.data.controls['salary'].value;
+    temp.age = this.data.controls['age'].value;
+
+    this.fs.add(temp).subscribe(
+      data => {
+        console.log(data);
+        alert("Successfully added");
+      }
+    )
+    this.data.reset();
+
 
   }
 
 
 
-
-
-
-
   ngOnInit(): void {
     console.log(this.data.valid);
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes.data);
   }
 
 }

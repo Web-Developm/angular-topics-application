@@ -41,6 +41,12 @@
       "name": "MARKER",
       "salary": "1400.00",
       "age": "18"
+    },
+    {
+      "id": "7",
+      "name": "Anderson",
+      "salary": "10000",
+      "age": "26"
     }
   ]
 }

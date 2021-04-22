@@ -7,6 +7,10 @@
         <th>Name</th>
         <th>Salary</th>
         <th>Age</th>
+        <th>Street</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zip</th>
         <th>Delete</th>
       </tr>
     </thead>
@@ -17,6 +21,10 @@
         <td>{{item.name}}</td>
         <td>{{item.salary | currency:'INR':'symbol'}}</td>
         <td>{{item.age}}</td>
+        <td>{{item.street}}</td>
+        <td>{{item.city}}</td>
+        <td>{{item.state}}</td>
+        <td>{{item.zip}}</td>
         <td><button (click)="delete(i)" type="button" class="btn btn-sm btn-outline-dark">Delete</button></td>
       </tr>
     </tbody>

@@ -15,7 +15,13 @@ export class FormsService {
     id: ['', [Validators.required, Validators.minLength(1), Validators.pattern(/^-?(0|[1-9]\d*)?$/)]],
     name: ['', [Validators.required, Validators.minLength(4),Validators.pattern('[a-zA-Z]*')]],
     salary: ['', [Validators.required, Validators.maxLength(10), Validators.pattern(/^-?(0|[1-9]\d*)?$/)]],
-    age: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(2), Validators.pattern(/^-?(0|[1-9]\d*)?$/)]]
+    age: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(2), Validators.pattern(/^-?(0|[1-9]\d*)?$/)]],
+    address:this.fb.group({
+      street:['',[Validators.required]],
+      city:['',Validators.required],
+      state:['',Validators.required],
+      zip:['',Validators.required]
+    })
   });
 
   url = "http://localhost:5555/data/";

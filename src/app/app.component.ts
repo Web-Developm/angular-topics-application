@@ -16,16 +16,16 @@ export class AppComponent {
 
   operation = [
     {
-      name:"add"
+      name: "add"
     },
     {
-      name:"data"
+      name: "data"
     },
     {
-      name:"update"
+      name: "update"
     },
     {
-      name:"delete"
+      name: "delete"
     }
   ]
 

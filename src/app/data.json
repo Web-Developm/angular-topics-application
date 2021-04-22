@@ -4,67 +4,121 @@
       "id": "0",
       "name": "KAYLING",
       "salary": "6000.00",
-      "age": "22"
+      "age": "22",
+      "street": "Holmes",
+      "city": "London",
+      "state": "London",
+      "zip": 1000
     },
     {
       "id": "1",
       "name": "BLAZE ",
       "salary": "2750.00",
-      "age": "25"
+      "age": "25",
+      "street": "Holmes",
+      "city": "London",
+      "state": "London",
+      "zip": 1000
     },
     {
       "id": "2",
       "name": "SANDRINE ",
       "salary": "900.00",
-      "age": "20"
+      "age": "20",
+      "street": "Holmes",
+      "city": "London",
+      "state": "London",
+      "zip": 1000
     },
     {
       "id": "3",
       "name": "ADELYN ",
       "salary": "1700.00 ",
-      "age": "19"
+      "age": "19",
+      "street": "Holmes",
+      "city": "London",
+      "state": "London",
+      "zip": 1000
     },
     {
       "id": "4",
       "name": "WADE ",
       "salary": "1350.00",
-      "age": "18"
+      "age": "18",
+      "street": "Holmes",
+      "city": "London",
+      "state": "London",
+      "zip": 1000
     },
     {
       "id": "5",
       "name": "JULIUS",
       "salary": "1350.00",
-      "age": "19"
+      "age": "19",
+      "street": "Holmes",
+      "city": "London",
+      "state": "London",
+      "zip": 1000
     },
     {
       "id": "6",
       "name": "MARKER",
       "salary": "1400.00",
-      "age": "18"
+      "age": "18",
+      "street": "Holmes",
+      "city": "London",
+      "state": "London",
+      "zip": 1000
     },
     {
       "id": "7",
       "name": "Anderson",
       "salary": "10000",
-      "age": "26"
+      "age": "26",
+      "street": "Holmes",
+      "city": "London",
+      "state": "London",
+      "zip": 1000
     },
     {
       "id": "8",
       "name": "McDen",
       "salary": "15000",
-      "age": "20"
+      "age": "20",
+      "street": "Holmes",
+      "city": "London",
+      "sate": "London",
+      "zip": 1000
     },
     {
       "id": "9",
       "name": "Ivan",
       "salary": "28738",
-      "age": "28"
+      "age": "28",
+      "street": "Holmes",
+      "city": "London",
+      "state": "London",
+      "zip": 1000
     },
     {
       "id": "10",
       "name": "Alford",
       "salary": "15067",
-      "age": "27"
+      "age": "27",
+      "street": "Holmes",
+      "city": "London",
+      "state": "London",
+      "zip": 1000
+    },
+    {
+      "id": "11",
+      "name": "Alex",
+      "salary": "10000",
+      "age": "24",
+      "street": "London",
+      "city": "London",
+      "state": "London",
+      "zip": "2000"
     }
   ]
 }

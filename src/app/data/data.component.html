@@ -7,6 +7,10 @@
         <th>Name</th>
         <th>Salary</th>
         <th>Age</th>
+        <th>Street</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zip</th>
         <th>Eligible for vote</th>
         <th>Eligible for Income Tax</th>
       </tr>
@@ -18,6 +22,10 @@
         <td>{{sur}}. {{item.name}}</td>
         <td>{{item.salary| currency:'INR':'symbol'}}</td>
         <td>{{item.age}}</td>
+        <td>{{item.street}}</td>
+        <td>{{item.city}}</td>
+        <td>{{item.state}}</td>
+        <td>{{item.zip}}</td>
 
         <td *ngIf="item.age>=18; else el">Eligible</td>
         <ng-template #el>Not Eligible</ng-template>

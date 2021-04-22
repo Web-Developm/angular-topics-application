@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormsService } from '../forms.service';
-import { FormGroup, Validators, FormControl } from '@angular/forms';
+import { FormGroup, Validators, FormControl, FormGroupName } from '@angular/forms';
 import { Structure } from '../str';
 
 @Component({
@@ -24,6 +24,10 @@ export class AddComponent implements OnInit {
     temp.name = this.data.controls['name'].value;
     temp.salary = this.data.controls['salary'].value;
     temp.age = this.data.controls['age'].value;
+    temp.street = this.data.get('address.street')?.value;
+    temp.city = this.data.get('address.city')?.value;
+    temp.state = this.data.get('address.state')?.value;
+    temp.zip = this.data.get('address.zip')?.value;
 
     this.fs.add(temp).subscribe(
       data => {
@@ -42,7 +46,7 @@ export class AddComponent implements OnInit {
 
 
   ngOnInit(): void {
-    console.log(this.fs.data.value);
+
   }
 
 

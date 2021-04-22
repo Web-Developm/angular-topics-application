@@ -36,7 +36,11 @@ export class UpdateComponent implements OnInit {
         id: info.id,
         name: info.name,
         salary: info.salary,
-        age: info.age
+        age: info.age,
+        street:info.street,
+        city:info.city,
+        state:info.state,
+        zip:info.state
       });
     }
 
@@ -53,6 +57,10 @@ export class UpdateComponent implements OnInit {
     info.name = this.data.controls['name'].value;
     info.salary = this.data.controls['salary'].value;
     info.age = this.data.controls['age'].value;
+    info.street=this.data.controls['street'].value;
+    info.city=this.data.controls['city'].value;
+    info.state=this.data.controls['state'].value;
+    info.zip=this.data.controls['zip'].value;
 
     let id = Number(info.id);
 

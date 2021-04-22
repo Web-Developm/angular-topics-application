@@ -7,15 +7,21 @@
         <th>Name</th>
         <th>Salary</th>
         <th>Age</th>
+        <th>Eligible for vote</th>
+        <th>Eligible for Income Tax</th>
       </tr>
     </thead>
 
-    <tbody *ngFor="let item of items">
+    <tbody *ngFor="let item of items; let i=index">
       <tr>
         <td>{{item.id| uppercase}}</td>
-        <td>{{item.name}}</td>
+        <td>{{sur}}. {{item.name}}</td>
         <td>{{item.salary| currency:'INR':'symbol'}}</td>
         <td>{{item.age}}</td>
+        <td *ngIf="item.age>=18; else el">Elgible</td>
+        <ng-template #el>Not Elgible</ng-template>
+        <td *ngIf="item.salary>3000; else el">Elgible</td>
+        <ng-template #el>Not Elgible</ng-template>
       </tr>
     </tbody>
   </table>

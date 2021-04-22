@@ -16,6 +16,8 @@ export class DataComponent implements OnInit {
 
   title="Data";
 
+  sur="Mr";
+
   public items!: Structure[];
 
 
@@ -29,15 +31,17 @@ export class DataComponent implements OnInit {
     )
   }
 
-  compare(a:any,b:any)
-  {
-    return a-b;
-  }
+  check=(index:any):any=>{
+    let test=this.items[index];
 
+    if(test.age<18)
+    {
+      alert("Not eligible")
+    }
 
-
-  sort() {
-    this.items.sort(this.compare);
+    else{
+      alert("Not eligible");
+    }
   }
 
 

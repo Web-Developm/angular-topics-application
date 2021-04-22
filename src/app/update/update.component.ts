@@ -12,6 +12,8 @@ export class UpdateComponent implements OnInit {
 
   constructor(private fs: FormsService) { }
 
+  title="Update";
+
   public items!: Structure[];
 
   public data: FormGroup = this.fs.data;

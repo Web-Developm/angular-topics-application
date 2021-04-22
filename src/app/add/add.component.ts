@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { FormsService } from '../forms.service';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { Structure } from '../str';
@@ -10,6 +10,8 @@ import { Structure } from '../str';
   providers: [FormsService]
 })
 export class AddComponent implements OnInit {
+
+  @Input() item!:string;
 
   constructor(private fs: FormsService) { }
 

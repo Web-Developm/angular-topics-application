@@ -14,6 +14,8 @@ export class DataComponent implements OnInit {
 
   constructor(private fs: FormsService, private http: HttpClient) { }
 
+  title="Data";
+
   public items!: Structure[];
 
 
@@ -27,10 +29,15 @@ export class DataComponent implements OnInit {
     )
   }
 
-  sort() {
-    this.items.reverse;
-    console.log(this.items.sort());
+  compare(a:any,b:any)
+  {
+    return a-b;
+  }
 
+
+
+  sort() {
+    this.items.sort(this.compare);
   }
 
 

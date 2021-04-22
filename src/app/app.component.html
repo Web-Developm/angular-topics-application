@@ -28,8 +28,26 @@
 
 <div class="container">
   <h5 class="display-6 text-center mt-3" [ngStyle]="{'font-size':'35px'}">{{today|date:'full'}}</h5>
+
+  <div *ngFor="let name of operation">
+    <div [ngSwitch]="name.name">
+      <div *ngSwitchCase="'add'"><a routerLink="/add"
+          [ngStyle]="{'text-decoration':'none', 'color':'black','font-size':'20px'}">Add
+          Operation</a></div>
+      <div *ngSwitchCase="'data'"><a routerLink="/data"
+          [ngStyle]="{'text-decoration':'none','color':'black', 'font-size':'20px'}">Data
+          Operation</a></div>
+      <div *ngSwitchCase="'update'"><a routerLink="/update"
+          [ngStyle]="{'text-decoration':'none', 'color':'black', 'font-size':'20px'}">Update
+          Operation</a></div>
+      <div *ngSwitchCase="'delete'"><a routerLink="/delete"
+          [ngStyle]="{'text-decoration':'none', 'color':'black', 'font-size':'20px'}">Delete
+          Opeation</a></div>
+    </div>
+  </div>
 </div>
 
 
-<router-outlet></router-outlet>
 
+
+<router-outlet></router-outlet>

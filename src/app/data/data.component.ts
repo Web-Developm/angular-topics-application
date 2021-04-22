@@ -14,16 +14,16 @@ export class DataComponent implements OnInit {
 
   constructor(private fs: FormsService, private http: HttpClient) { }
 
-  title="Data";
+  title = "Data";
 
-  sur="Mr";
+  sur = "Mr";
 
   public items!: Structure[];
 
 
 
   get() {
-    this.fs.info().subscribe(
+    this.fs.info(). subscribe(
       data => {
         this.items = data;
         console.log(data);
@@ -31,15 +31,16 @@ export class DataComponent implements OnInit {
     )
   }
 
-  check=(index:any):any=>{
-    let test=this.items[index];
 
-    if(test.age<18)
-    {
+
+  check = (index: any): any => {
+    let test = this.items[index];
+
+    if (test.age > 18) {
       alert("Not eligible")
     }
 
-    else{
+    else {
       alert("Not eligible");
     }
   }

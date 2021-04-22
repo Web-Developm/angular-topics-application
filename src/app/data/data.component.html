@@ -18,10 +18,13 @@
         <td>{{sur}}. {{item.name}}</td>
         <td>{{item.salary| currency:'INR':'symbol'}}</td>
         <td>{{item.age}}</td>
-        <td *ngIf="item.age>=18; else el">Elgible</td>
-        <ng-template #el>Not Elgible</ng-template>
-        <td *ngIf="item.salary>3000; else el">Elgible</td>
-        <ng-template #el>Not Elgible</ng-template>
+
+        <td *ngIf="item.age>=18; else el">Eligible</td>
+        <ng-template #el>Not Eligible</ng-template>
+
+        <td *ngIf="item.salary>3000; else el">Eligible</td>
+        <ng-template #el>Not Eligible</ng-template>
+
       </tr>
     </tbody>
   </table>

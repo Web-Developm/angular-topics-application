@@ -14,6 +14,21 @@ export class AppComponent {
 
   public content = this.fs.content;
 
+  operation = [
+    {
+      name:"add"
+    },
+    {
+      name:"data"
+    },
+    {
+      name:"update"
+    },
+    {
+      name:"delete"
+    }
+  ]
+
 
 
   constructor(private fs: FormsService) {

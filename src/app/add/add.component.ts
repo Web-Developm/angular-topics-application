@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsService } from '../forms.service';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { Structure } from '../str';
@@ -18,7 +18,6 @@ export class AddComponent implements OnInit {
   add() {
 
     let temp = new Structure();
-
     temp.id = this.data.controls['id'].value;
     temp.name = this.data.controls['name'].value;
     temp.salary = this.data.controls['salary'].value;
@@ -31,18 +30,18 @@ export class AddComponent implements OnInit {
       }
     )
     this.data.reset();
-
-
   }
+
+
+
+
 
 
 
   ngOnInit(): void {
-    console.log(this.data.valid);
+    console.log(this.fs.data.value);
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes.data);
-  }
+
 
 }

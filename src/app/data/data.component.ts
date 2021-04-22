@@ -27,6 +27,12 @@ export class DataComponent implements OnInit {
     )
   }
 
+  sort() {
+    this.items.reverse;
+    console.log(this.items.sort());
+
+  }
+
 
   ngOnInit(): void {
     this.get();

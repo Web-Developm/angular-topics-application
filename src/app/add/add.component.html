@@ -7,18 +7,19 @@
       <label for="id" [ngClass]="{'text-dark':'true'}">Id</label>
 
       <div class="alert mt-2" *ngIf="data.controls['id'].hasError('required') && data.controls['id'].touched"
-        [ngStyle]="{'color':'black', 'background-color':'#fbe0c4'}">
-        Id required
+        [ngStyle]="{'color':'#fbe0c4'}" [ngClass]="{'text-danger':data}">
+
+        *Id required
       </div>
 
       <div class="alert mt-2" *ngIf="data.controls['id'].hasError('pattern') && data.controls['id'].touched"
-        [ngStyle]="{'color':'black', 'background-color':'#fbe0c4'}">
-        Id is numbers only
+        [ngStyle]="{'color':'#fbe0c4'}" [ngClass]="{'text-danger':data}">
+        *Id is numbers only
       </div>
 
       <div class="alert mt-2" *ngIf="data.controls['id'].hasError('minlength') && data.controls['id'].touched"
-        [ngStyle]="{'color':'black', 'background-color':'#fbe0c4'}">
-        Id should be minimum 1 characters
+        [ngStyle]="{'color':'#fbe0c4'}" [ngClass]="{'text-danger':data}">
+        *Id should be minimum 1 characters
       </div>
 
     </div>
@@ -27,38 +28,40 @@
       <input type="text" name="name" id="name" class="form-control" placeholder="Name" formControlName="name">
       <label for="name" [ngClass]="{'text-dark':'true'}">Name</label>
 
-      <div class="alert  mt-2" *ngIf="data.controls['name'].hasError('required') && data.controls['name'].touched"
-        [ngStyle]="{'color':'black','background-color':'#fbe0c4'}">
-        Name required
+      <div class="alert mb-0" *ngIf="data.controls['name'].hasError('required') && data.controls['name'].touched"
+        [ngStyle]="{'color':'#fbe0c4'}" [ngClass]="{'text-danger':data}">
+        *Name required
       </div>
 
-      <div class="alert mt-2" *ngIf="data.controls['name'].hasError('pattern') && data.controls['name'].touched"
-        [ngStyle]="{'color':'black', 'background-color':'#fbe0c4'}">Name shoud be letters
+      <div class="alert mb-0" *ngIf="data.controls['name'].hasError('pattern') && data.controls['name'].touched"
+        [ngStyle]="{'color':'#fbe0c4'}" [ngClass]="{'text-danger':data}">*Name shoud be letters
+      </div>
+
+      <div class="alert mb-0" *ngIf="data.controls['name'].hasError('minlength') && data.controls['name'].touched"
+        [ngStyle]="{'color':'#fbe0c4'}" [ngClass]="{'text-danger':data}">
+        *Name sholud be minimum 4 characters
       </div>
     </div>
 
-    <div class="alert mt-2" *ngIf="data.controls['name'].hasError('minlength') && data.controls['name'].touched"
-      [ngStyle]="{'color':'black', 'background-color':'#fbe0c4'}">
-      Name sholud be minimum 4 characters
-    </div>
+
 
     <div class="form-floating mb-4">
       <input type="text" name="salary" id="salary" class="form-control" placeholder="Salary" formControlName="salary">
       <label for="salary" [ngClass]="{'text-dark':'true'}">Salary</label>
 
-      <div class="alert mt-2" *ngIf="data.controls['salary'].hasError('required') && data.controls['salary'].touched"
-        [ngStyle]="{'color':'black', 'background-color':'#fbe0c4'}">
-        Salary required
+      <div class="alert mb-0" *ngIf="data.controls['salary'].hasError('required') && data.controls['salary'].touched"
+        [ngStyle]="{'color':'#fbe0c4'}" [ngClass]="{'text-danger':data}">
+        *Salary required
       </div>
 
-      <div class="alert mt-2" *ngIf="data.controls['salary'].hasError('pattern') && data.controls['salary'].touched"
-        [ngStyle]="{'color':'black','background-color':'#fbe0c4'}">
-        Salary is number only
+      <div class="alert mb-0" *ngIf="data.controls['salary'].hasError('pattern') && data.controls['salary'].touched"
+        [ngStyle]="{'color':'#fbe0c4'}" [ngClass]="{'text-danger':data}">
+        *Salary is number only
       </div>
 
-      <div class="alert mt-2" *ngIf="data.controls['salary'].hasError('maxlength') && data.controls['salary'].touched"
-        [ngStyle]="{'color':'black', 'background-color':'#fbe0c4'}">
-        Salary should be maximum 10 characters
+      <div class="alert mb-0" *ngIf="data.controls['salary'].hasError('maxlength') && data.controls['salary'].touched"
+        [ngStyle]="{'color':'#fbe0c4'}" [ngClass]="{'text-danger':data}">
+        *Salary should be maximum 10 characters
       </div>
     </div>
 
@@ -66,19 +69,19 @@
       <input type="text" name="age" id="age" class="form-control" placeholder="Age" formControlName="age">
       <label for="age" [ngClass]="{'text-dark':'true'}">Age</label>
 
-      <div class="alert mt-2" *ngIf="data.controls['age'].hasError('required') && data.controls['age'].touched"
-        [ngStyle]="{'color':'black', 'background-color':'#fbe0c4'}">
-        Age required
+      <div class="alert mb-0" *ngIf="data.controls['age'].hasError('required') && data.controls['age'].touched"
+        [ngStyle]="{'color':'#fbe0c4'}" [ngClass]="{'text-danger':data}">
+        *Age required
       </div>
 
-      <div class="alert mt-2" *ngIf="data.controls['age'].hasError('pattern') && data.controls['age'].touched"
-        [ngStyle]="{'color':'black','background-color':'#fbe0c4'}">
-        Age is number only
+      <div class="alert mb-0" *ngIf="data.controls['age'].hasError('pattern') && data.controls['age'].touched"
+        [ngStyle]="{'color':'#fbe0c4'}" [ngClass]="{'text-danger':data}">
+        *Age is number only
       </div>
 
-      <div class="alert mt-2" *ngIf="data.controls['age'].hasError('maxlength') && data.controls['age'].touched"
-        [ngStyle]="{'color':'black', 'background-color':'#fbe0c4'}">
-        Age should be maximum 2 characters
+      <div class="alert mb-0" *ngIf="data.controls['age'].hasError('maxlength') && data.controls['age'].touched"
+        [ngStyle]="{'color':'#fbe0c4'}" [ngClass]="{'text-danger':data}">
+        *Age should be maximum 2 characters
       </div>
     </div>
 

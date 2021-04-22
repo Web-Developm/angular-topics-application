@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormsService } from '../forms.service';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { Structure } from '../str';
@@ -11,7 +11,7 @@ import { Structure } from '../str';
 })
 export class AddComponent implements OnInit {
 
-  @Input() item!:string;
+  @Input() item!: string;
 
   constructor(private fs: FormsService) { }
 
@@ -29,6 +29,7 @@ export class AddComponent implements OnInit {
       data => {
         console.log(data);
         alert("Successfully added");
+        console.log(this.data.value);
       }
     )
     this.data.reset();

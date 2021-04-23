@@ -12,7 +12,7 @@ export class UpdateComponent implements OnInit {
 
   constructor(private fs: FormsService) { }
 
-  title="Update";
+  title = "Update";
 
   public items!: Structure[];
 
@@ -27,20 +27,26 @@ export class UpdateComponent implements OnInit {
     )
   }
 
+
+
   update1(info: any, index: any) {
 
     let temp = confirm("Are confirm update the value");
 
     if (temp == true) {
-      this.data.setValue({
+      this.data.patchValue({
         id: info.id,
         name: info.name,
         salary: info.salary,
         age: info.age,
-        street:info.street,
-        city:info.city,
-        state:info.state,
-        zip:info.state
+        address: {
+          street: info.street,
+          city: info.street,
+          state: info.street,
+          zip: info.street
+        }
+
+
       });
     }
 
@@ -57,10 +63,10 @@ export class UpdateComponent implements OnInit {
     info.name = this.data.controls['name'].value;
     info.salary = this.data.controls['salary'].value;
     info.age = this.data.controls['age'].value;
-    info.street=this.data.controls['street'].value;
-    info.city=this.data.controls['city'].value;
-    info.state=this.data.controls['state'].value;
-    info.zip=this.data.controls['zip'].value;
+    info.street = this.data.get('address.street')?.value;
+    info.city = this.data.get('address.city')?.value;
+    info.state = this.data.get('address.state')?.value;
+    info.zip = this.data.get('address.zip')?.value;
 
     let id = Number(info.id);
 

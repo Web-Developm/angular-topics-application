@@ -31,6 +31,7 @@
       </tr>
     </tbody>
   </table>
+
   <form [formGroup]="data" class="mt-4">
     <div class="form-floating mb-4">
       <input type="text" class="form-control" name="id" id="id" placeholder="Id" formControlName="id">
@@ -51,6 +52,30 @@
       <input type="text" class="form-control" name="age" id="age" placeholder="age" formControlName="age">
       <label for="age">Age</label>
     </div>
+
+    <div formGroupName="address">
+      <div class="form-floating mb-4">
+        <input type="text" class="form-control" name="street" id="street" placeholder="Street" formControlName="street">
+        <label for="street">Street</label>
+      </div>
+
+      <div class="form-floating mb-4">
+        <input type="text" class="form-control" name="city" id="city" placeholder="city" formControlName="city">
+        <label for="city">City</label>
+      </div>
+
+      <div class="form-floating mb-4">
+        <input type="text" class="form-control" name="state" id="state" placeholder="state" formControlName="state">
+        <label for="state">State</label>
+      </div>
+
+      <div class="form-floating mb-4">
+        <input type="text" class="form-control" name="zip" id="zip" placeholder="zip" formControlName="zip">
+        <label for="zip">Zip</label>
+      </div>
+    </div>
+
+
 
     <div class="d-grid gap-2 mb-5">
       <button (click)="update2()" [disabled]="data.invalid" type="button" class="btn btn-outline-dark">Update</button>

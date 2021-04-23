@@ -43,8 +43,15 @@ export class AddComponent implements OnInit {
     this.data.reset();
   }
 
-  validation(val:string)
-  {
+  /*get skill() {
+    return this.fs.skill();
+  }
+
+  addskill() {
+    this.fs.addskill();
+  }*/
+
+  validation(val: string) {
     return (this.data.controls.address as FormGroup).get(val);
   }
 
@@ -55,7 +62,7 @@ export class AddComponent implements OnInit {
 
 
   ngOnInit(): void {
-
+    this.fs.setValidation();
   }
 
 

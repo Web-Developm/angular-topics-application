@@ -83,6 +83,11 @@
         <option value="AB+">AB+</option>
         <option value="AB-">AB-</option>
       </select>
+
+      <div class="alert mb-4" *ngIf="data.controls['blood'].hasError('required') && data.controls['blood'].touched"
+        [ngStyle]="{'color':'#fbe0c4'}" [ngClass]="{'text-danger':data}">
+        *Blood required
+      </div>
     </div>
 
 
@@ -132,21 +137,38 @@
       <div class="form-floating mb-4">
         <input type="text" class="form-control" name="street" id="street" placeholder="Street" formControlName="street">
         <label for="street">Street</label>
+
+        <div class="alert" [ngClass]="{'d-none':validation('street')?.valid|| validation('street')?.untouched}">
+          *Street required
+        </div>
+
       </div>
 
       <div class='form-floating mb-4'>
         <input type="text" class="form-control" name="city" id="city" placeholder="City" formControlName="city">
         <label for="city">City</label>
+
+        <div class="alert" [ngClass]="{'d-none':validation('city')?.valid || validation('city')?.untouched}">
+          *City required
+        </div>
       </div>
 
       <div class="form-floating mb-4">
         <input type="text" class="form-control" name="state" id="state" placeholder="State" formControlName="state">
         <label for="state">State</label>
+
+        <div class="alert" [ngClass]="{'d-none':validation('state')?.valid || validation('state')?.untouched}">
+          *State required
+        </div>
       </div>
 
       <div class="form-floating mb-4">
         <input type="text" class="form-control" name="zip" id="zip" placeholder="Zip" formControlName="zip">
         <label for="zip">Zip</label>
+
+        <div class="alert" [ngClass]="{'d-none':validation('zip')?.valid || validation('zip')?.untouched}">
+          *Zip Code required
+        </div>
       </div>
     </div>
 

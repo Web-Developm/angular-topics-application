@@ -43,6 +43,11 @@ export class AddComponent implements OnInit {
     this.data.reset();
   }
 
+  validation(val:string)
+  {
+    return (this.data.controls.address as FormGroup).get(val);
+  }
+
 
 
 

@@ -33,7 +33,6 @@ export class DataComponent implements OnInit {
   }
 
 
-
   check = (index: any): any => {
     let test = this.items[index];
 

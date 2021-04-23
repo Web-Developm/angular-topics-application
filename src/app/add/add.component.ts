@@ -12,9 +12,9 @@ import { bindCallback } from 'rxjs';
 })
 export class AddComponent implements OnInit {
 
-  color="#bd2000";
+  color = "#bd2000";
 
-  title="Add";
+  title = "Add";
 
   constructor(private fs: FormsService) { }
 
@@ -57,13 +57,6 @@ export class AddComponent implements OnInit {
   validation(val: string) {
     return (this.data.controls.address as FormGroup).get(val);
   }
-
-
-
-
-
-
-
 
 
   ngOnInit(): void {

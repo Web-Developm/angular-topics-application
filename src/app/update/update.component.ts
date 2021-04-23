@@ -86,7 +86,6 @@ export class UpdateComponent implements OnInit {
   }
 
 
-
   ngOnInit(): void {
     this.get();
   }

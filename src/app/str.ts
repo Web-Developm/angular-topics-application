@@ -1,5 +1,5 @@
 export class Structure {
-  user:any
+  user:any;
   id: any;
   name: any;
   email:any;

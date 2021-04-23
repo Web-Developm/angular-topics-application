@@ -56,6 +56,22 @@
     </div>
 
     <div class="form-floating mb-4">
+      <input type="email" class="form-control" name="email" id="email" formControlName="email" placeholder="email">
+      <label for="email">Email</label>
+
+      <div class="alert mb-2" *ngIf="data.controls['email'].hasError('required') && data.controls['email'].touched"
+        [ngStyle]="{'color':'#fbe0c4'}" [ngClass]="{'text-danger':data}">
+        *Email required
+      </div>
+
+      <div class="alert mb-2" *ngIf="data.controls['email'].hasError('pattern') && data.controls['email'].touched"
+        [ngStyle]="{'color':'#fbe0c4'}" [ngClass]="{'text-danger':data}">
+        *Email should be valid
+      </div>
+
+    </div>
+
+    <div class="form-floating mb-4">
       <select class="form-select" formControlName="blood">
         <option selected value="">Select Blood Group</option>
         <option value="O+">O+</option>

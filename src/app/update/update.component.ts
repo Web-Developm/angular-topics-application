@@ -38,6 +38,7 @@ export class UpdateComponent implements OnInit {
         user:info.user,
         id: info.id,
         name: info.name,
+        email:info.email,
         salary: info.salary,
         age: info.age,
         address: {

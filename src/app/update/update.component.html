@@ -7,6 +7,7 @@
         <th>Id</th>
         <th>Employee Type</th>
         <th>Name</th>
+        <th>Email</th>
         <th>Blood</th>
         <th>Salary</th>
         <th>Age</th>
@@ -24,6 +25,7 @@
         <td>{{item.id}}</td>
         <td>{{item.user}}</td>
         <td>{{item.name | uppercase}}</td>
+        <td>{{item.email}}</td>
         <td>{{item.blood}}</td>
         <td>{{item.salary | currency:'INR':'symbol'}}</td>
         <td>{{item.age}}</td>
@@ -59,6 +61,11 @@
     </div>
 
     <div class="form-floating mb-4">
+      <input type="email" class="form-control" name="email" id="email" formControlName="email" placeholder="email">
+      <label for="email">Email</label>
+    </div>
+
+    <div class="form-floating mb-4">
       <select class="form-select" formControlName="blood">
         <option selected value="">Select Blood Group</option>
         <option value="O+">O+</option>
@@ -71,6 +78,8 @@
         <option value="AB-">AB-</option>
       </select>
     </div>
+
+
 
     <div class="form-floating mb-4">
       <input type="text" class="form-control" name="salary" id="salary" placeholder="salary" formControlName="salary">

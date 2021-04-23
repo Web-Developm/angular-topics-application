@@ -66,7 +66,7 @@ export class FormsService {
         }
 
         if (user == 'Experience') {
-          salary?.setValidators([Validators.required]);
+          salary?.setValidators([Validators.required,Validators.pattern(/^-?(0|[1-9]\d*)?$/)]);
         }
 
         salary?.updateValueAndValidity();

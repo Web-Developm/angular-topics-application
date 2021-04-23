@@ -12,7 +12,8 @@ export class DeleteComponent implements OnInit {
 
   constructor(private fs: FormsService, private http: HttpClient) { }
 
-  title="Delete"
+  title="Delete";
+  color="#28b5b5";
 
   public items!: Structure[];
 

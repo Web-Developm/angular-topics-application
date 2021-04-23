@@ -15,6 +15,7 @@ export class DataComponent implements OnInit {
   constructor(private fs: FormsService, private http: HttpClient) { }
 
   title = "Data";
+  color = "#fea82f";
 
   sur = "Mr";
 
@@ -23,7 +24,7 @@ export class DataComponent implements OnInit {
 
 
   get() {
-    this.fs.info(). subscribe(
+    this.fs.info().subscribe(
       data => {
         this.items = data;
         console.log(data);

@@ -13,6 +13,7 @@ export class UpdateComponent implements OnInit {
   constructor(private fs: FormsService) { }
 
   title = "Update";
+  color = "#c67ace";
 
   public items!: Structure[];
 
@@ -35,10 +36,10 @@ export class UpdateComponent implements OnInit {
 
     if (temp == true) {
       this.data.patchValue({
-        user:info.user,
+        user: info.user,
         id: info.id,
         name: info.name,
-        email:info.email,
+        email: info.email,
         salary: info.salary,
         age: info.age,
         address: {

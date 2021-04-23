@@ -12,7 +12,7 @@ export class FormsService {
   constructor(private http: HttpClient, private fb: FormBuilder) { }
 
   data = this.fb.group({
-    user: ['Fresher', Validators.required],
+    user: ['Experience', Validators.required],
     id: ['', [Validators.required, Validators.minLength(1), Validators.pattern(/^-?(0|[1-9]\d*)?$/)]],
     name: ['', [Validators.required, Validators.minLength(4), Validators.pattern('[a-zA-Z]*')]],
     email: ['', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
@@ -25,9 +25,6 @@ export class FormsService {
       state: ['', Validators.required],
       zip: ['', Validators.required]
     })
-    /*skill:this.fb.array([
-      this.fb.control('')
-    ])*/
   });
 
   url = "http://localhost:5555/data/";

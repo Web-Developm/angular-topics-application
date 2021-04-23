@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FormsService } from '../forms.service';
 import { FormGroup, Validators, FormControl, FormGroupName } from '@angular/forms';
 import { Structure } from '../str';
+import { bindCallback } from 'rxjs';
 
 @Component({
   selector: 'app-add',
@@ -54,6 +55,8 @@ export class AddComponent implements OnInit {
   validation(val: string) {
     return (this.data.controls.address as FormGroup).get(val);
   }
+
+  color="green";
 
 
 

@@ -5,7 +5,9 @@
     <thead>
       <tr>
         <th>Id</th>
+        <th>Employee Type</th>
         <th>Name</th>
+        <th>Blood</th>
         <th>Salary</th>
         <th>Age</th>
         <th>Street</th>
@@ -20,19 +22,32 @@
     <tbody *ngFor="let item of items; let i=index">
       <tr>
         <td>{{item.id}}</td>
+        <td>{{item.user}}</td>
         <td>{{item.name | uppercase}}</td>
+        <td>{{item.blood}}</td>
         <td>{{item.salary | currency:'INR':'symbol'}}</td>
         <td>{{item.age}}</td>
         <td>{{item.street}}</td>
         <td>{{item.city}}</td>
         <td>{{item.state}}</td>
         <td>{{item.zip}}</td>
-        <td><button (click)="update1(item,i)" type="button" class="btn btn-sm btn-outline-dark">Update</button></td>
+        <td><button (click)="update1(item,i)" type="button" class="btn"><i class="far fa-1x fa-edit"></i></button></td>
       </tr>
     </tbody>
   </table>
 
   <form [formGroup]="data" class="mt-4">
+
+    <div class="form-check form-check-inline mb-4">
+      <input type="radio" class="form-check-input" name="user" id="fresher" formControlName="user" value="Fresher">
+      <label for="form-check-label" for="user">Fresher</label>
+    </div>
+
+    <div class="form-check form-check-inline mb-4">
+      <input type="radio" class="form-check-input" name="user" id="experience" formControlName="user"
+        value="Experience">
+      <label for="form-check-label" for="user">Experience</label>
+    </div>
     <div class="form-floating mb-4">
       <input type="text" class="form-control" name="id" id="id" placeholder="Id" formControlName="id">
       <label for="id">Id</label>
@@ -41,6 +56,20 @@
     <div class="form-floating mb-4">
       <input type="text" class="form-control" name="name" id="name" placeholder="name" formControlName="name">
       <label for="name">Name</label>
+    </div>
+
+    <div class="form-floating mb-4">
+      <select class="form-select" formControlName="blood">
+        <option selected value="">Select Blood Group</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+      </select>
     </div>
 
     <div class="form-floating mb-4">

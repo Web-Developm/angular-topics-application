@@ -20,8 +20,11 @@ export class AddComponent implements OnInit {
   add() {
 
     let temp = new Structure();
+
+    temp.user=this.data.controls['user'].value;
     temp.id = this.data.controls['id'].value;
     temp.name = this.data.controls['name'].value;
+    temp.blood=this.data.controls['blood'].value;
     temp.salary = this.data.controls['salary'].value;
     temp.age = this.data.controls['age'].value;
     temp.street = this.data.get('address.street')?.value;

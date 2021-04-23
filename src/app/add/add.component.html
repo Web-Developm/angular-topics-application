@@ -1,7 +1,18 @@
 <div class="container mt-4">
   <h1 class="display-6 mb-3">{{item}}</h1>
-  <p>{{data.value | json}}</p>
+  <p class="mb-5">{{data.value | json}}</p>
   <form [formGroup]="data">
+
+    <div class="form-check form-check-inline mb-4">
+      <input type="radio" class="form-check-input" id="fresher" name="user" formControlName="user" value="Fresher">
+      <label class="form-check-label" for="fresher">Fresher</label>
+    </div>
+
+    <div class="form-check form-check-inline mb-4">
+      <input type="radio" class="form-check-input" id="experience" name="user" formControlName="user"
+        value="Experience">
+      <label class="form-check-label" for="experience">Experience</label>
+    </div>
 
     <div class="form-floating mb-4">
       <input type="text" name="id" id="id" class="form-control" placeholder="Id" formControlName="id">
@@ -43,6 +54,21 @@
         *Name sholud be minimum 4 characters
       </div>
     </div>
+
+    <div class="form-floating mb-4">
+      <select class="form-select" formControlName="blood">
+        <option selected value="">Select Blood Group</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+      </select>
+    </div>
+
 
 
 

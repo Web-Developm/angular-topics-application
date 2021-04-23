@@ -35,6 +35,7 @@ export class UpdateComponent implements OnInit {
 
     if (temp == true) {
       this.data.patchValue({
+        user:info.user,
         id: info.id,
         name: info.name,
         salary: info.salary,

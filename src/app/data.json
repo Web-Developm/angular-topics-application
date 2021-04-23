@@ -1,8 +1,10 @@
 {
   "data": [
     {
+      "user": "Fresher",
       "id": "0",
       "name": "KAYLING",
+      "blood": "O+",
       "salary": "6000.00",
       "age": "22",
       "street": "Holmes",
@@ -11,8 +13,10 @@
       "zip": 1000
     },
     {
+      "user": "Fresher",
       "id": "1",
       "name": "BLAZE ",
+      "blood": "B+",
       "salary": "2750.00",
       "age": "25",
       "street": "Holmes",
@@ -21,8 +25,10 @@
       "zip": 1000
     },
     {
+      "user": "Fresher",
       "id": "2",
       "name": "SANDRINE ",
+      "blood": "AB+",
       "salary": "900.00",
       "age": "20",
       "street": "Holmes",
@@ -31,8 +37,10 @@
       "zip": 1000
     },
     {
+      "user": "Fresher",
       "id": "3",
       "name": "ADELYN ",
+      "blood": "A-",
       "salary": "1700.00 ",
       "age": "19",
       "street": "Holmes",
@@ -41,8 +49,10 @@
       "zip": 1000
     },
     {
+      "user": "Fresher",
       "id": "4",
       "name": "WADE ",
+      "blood": "B+",
       "salary": "1350.00",
       "age": "18",
       "street": "Holmes",
@@ -51,8 +61,10 @@
       "zip": 1000
     },
     {
+      "user": "Fresher",
       "id": "5",
       "name": "JULIUS",
+      "blood": "O-",
       "salary": "1350.00",
       "age": "19",
       "street": "Holmes",
@@ -61,7 +73,9 @@
       "zip": 1000
     },
     {
+      "user": "Fresher",
       "id": "6",
+      "blood": "AB-",
       "name": "MARKER",
       "salary": "1400.00",
       "age": "18",
@@ -71,8 +85,10 @@
       "zip": 1000
     },
     {
+      "user": "Experience",
       "id": "7",
       "name": "Anderson",
+      "blood": "A+",
       "salary": "10000",
       "age": "26",
       "street": "Holmes",
@@ -81,8 +97,10 @@
       "zip": 1000
     },
     {
+      "user": "Experience",
       "id": "8",
       "name": "McDen",
+      "blood": "A-",
       "salary": "15000",
       "age": "20",
       "street": "Holmes",
@@ -91,8 +109,10 @@
       "zip": 1000
     },
     {
+      "user": "Experience",
       "id": "9",
       "name": "Ivan",
+      "blood": "B+",
       "salary": "28738",
       "age": "28",
       "street": "Holmes",
@@ -101,8 +121,10 @@
       "zip": 1000
     },
     {
+      "user": "Experience",
       "id": "10",
       "name": "Alford",
+      "blood": "AB+",
       "salary": "15067",
       "age": "27",
       "street": "Holmes",
@@ -111,10 +133,24 @@
       "zip": 1000
     },
     {
+      "user": "Experience",
       "id": "11",
-      "name": "Alex",
+      "name": "Lucida",
+      "blood": "B+",
       "salary": "10000",
       "age": "24",
+      "street": "London",
+      "city": "London",
+      "state": "London",
+      "zip": "London"
+    },
+    {
+      "user": "Fresher",
+      "id": "12",
+      "name": "Benjamin",
+      "blood": "B+",
+      "salary": "5000",
+      "age": "18",
       "street": "London",
       "city": "London",
       "state": "London",

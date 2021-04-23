@@ -1,10 +1,12 @@
 <div class="container mt-4">
   <h1 class="display-6 mb-3">{{title}}</h1>
   <table class="table table-bordered">
-    <thead class="table-light text-secondary">
+    <thead class="table-light text-dark">
       <tr>
         <th>Id</th>
+        <th>Employee Type</th>
         <th>Name</th>
+        <th>Blood</th>
         <th>Salary</th>
         <th>Age</th>
         <th>Street</th>
@@ -18,14 +20,16 @@
     <tbody *ngFor="let item of items; let i=index">
       <tr>
         <td>{{item.id}}</td>
+        <td>{{item.user}}</td>
         <td>{{item.name}}</td>
+        <td></td>
         <td>{{item.salary | currency:'INR':'symbol'}}</td>
         <td>{{item.age}}</td>
         <td>{{item.street}}</td>
         <td>{{item.city}}</td>
         <td>{{item.state}}</td>
         <td>{{item.zip}}</td>
-        <td><button (click)="delete(i)" type="button" class="btn btn-sm btn-outline-dark">Delete</button></td>
+        <td><button (click)="delete(i)" type="button" class="btn"><i class="far fa-trash-alt"></i></button></td>
       </tr>
     </tbody>
   </table>

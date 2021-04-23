@@ -12,15 +12,17 @@ export class FormsService {
   constructor(private http: HttpClient, private fb: FormBuilder) { }
 
   data = this.fb.group({
+    user: ['', Validators.required],
     id: ['', [Validators.required, Validators.minLength(1), Validators.pattern(/^-?(0|[1-9]\d*)?$/)]],
-    name: ['', [Validators.required, Validators.minLength(4),Validators.pattern('[a-zA-Z]*')]],
+    name: ['', [Validators.required, Validators.minLength(4), Validators.pattern('[a-zA-Z]*')]],
+    blood:['',Validators.required],
     salary: ['', [Validators.required, Validators.maxLength(10), Validators.pattern(/^-?(0|[1-9]\d*)?$/)]],
     age: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(2), Validators.pattern(/^-?(0|[1-9]\d*)?$/)]],
-    address:this.fb.group({
-      street:['',[Validators.required]],
-      city:['',Validators.required],
-      state:['',Validators.required],
-      zip:['',Validators.required]
+    address: this.fb.group({
+      street: ['', [Validators.required]],
+      city: ['', Validators.required],
+      state: ['', Validators.required],
+      zip: ['', Validators.required]
     })
   });
 

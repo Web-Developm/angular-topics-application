@@ -1,10 +1,13 @@
 <div class="container mt-3 table-responsive">
   <h1 class="display-6 mb-3">{{title}}</h1>
   <table class="table table-bordered">
-    <thead class="table-light text-secondary">
+    <thead class="table-light text-dark">
       <tr>
+
         <th>Id</th>
+        <th>Employee Type</th>
         <th>Name</th>
+        <th>Blood</th>
         <th>Salary</th>
         <th>Age</th>
         <th>Street</th>
@@ -18,8 +21,11 @@
 
     <tbody *ngFor="let item of items; let i=index">
       <tr>
+
         <td>{{item.id| uppercase}}</td>
-        <td>{{sur}}. {{item.name}}</td>
+        <td>{{item.user}}</td>
+        <td>{{sur}}. {{item.name | uppercase}}</td>
+        <td>{{item.blood}}</td>
         <td>{{item.salary| currency:'INR':'symbol'}}</td>
         <td>{{item.age}}</td>
         <td>{{item.street}}</td>

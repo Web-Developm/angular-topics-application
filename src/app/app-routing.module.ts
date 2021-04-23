@@ -4,6 +4,7 @@ import { AddComponent } from '../app/add/add.component';
 import { DataComponent } from '../app/data/data.component';
 import { UpdateComponent } from '../app/update/update.component';
 import { DeleteComponent } from '../app/delete/delete.component';
+import { FormComponent } from '../app/form/form.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,10 @@ const routes: Routes = [
 
   {
     path: 'delete', component: DeleteComponent
+  },
+
+  {
+    path: 'form', component: FormComponent
   }
 ];
 
@@ -29,4 +34,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const route = [AddComponent, DataComponent, UpdateComponent, DeleteComponent]
+export const route = [AddComponent, DataComponent, UpdateComponent, DeleteComponent, FormComponent]

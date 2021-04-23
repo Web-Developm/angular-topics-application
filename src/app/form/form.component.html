@@ -1,0 +1,39 @@
+<div class="container">
+  <p>form works!</p>
+
+  <div [formGroup]="data1">
+
+    <div class="form-floating mb-2">
+      <input type="text" class="form-control" id="name" name="name" formControlName="name" placeholder="Name">
+      <label for="name">Name</label>
+    </div>
+
+    <div [formGroup]="data2">
+      <div class="form-floating mb-2">
+        <input type="text" class="form-control" id="email" name="email" formControlName="email" placeholder="Email">
+        <label for="email">Email</label>
+      </div>
+    </div>
+
+    <div class="form-floating mb-2">
+      <input type="text" class="form-control" id="phone" name="phone" formControlName="phone" placeholder="Phone">
+      <label for="phone">Phone</label>
+    </div>
+
+    <div [formGroup]="data2">
+      <div class="form-floating mb-2">
+        <input type="text" class="form-control" id="address" name="address" formControlName="address"
+          placeholder="Address">
+        <label for="address">Address</label>
+      </div>
+    </div>
+
+    <div class="d-grid gap-2">
+      <button (click)="display()" type="button" class="btn btn-sm btn-outline-dark">Submit</button>
+    </div>
+
+
+
+
+  </div>
+</div>

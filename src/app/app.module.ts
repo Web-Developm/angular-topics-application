@@ -8,10 +8,11 @@ import { DataComponent } from './data/data.component';
 import { DeleteComponent } from './delete/delete.component';
 import { UpdateComponent } from './update/update.component';
 import { FormsService } from '../app/forms.service';
-import {Structure} from '../app/str';
+import { Structure } from '../app/str';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     route,
     DataComponent,
     DeleteComponent,
-    UpdateComponent
+    UpdateComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [FormsService,Structure],
+  providers: [FormsService, Structure],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

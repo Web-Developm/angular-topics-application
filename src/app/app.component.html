@@ -21,6 +21,10 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/delete">Delete</a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/form">Form</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -32,16 +36,16 @@
   <div *ngFor="let name of operation">
     <div [ngSwitch]="name.name">
       <div *ngSwitchCase="'add'"><a routerLink="/add"
-          [ngStyle]="{'text-decoration':'none', 'color':'black','font-size':'17px'}">Add
+          [ngStyle]="{'text-decoration':'none', 'color':'#bd2000','font-size':'17px'}">Add
           Operation</a></div>
       <div *ngSwitchCase="'data'"><a routerLink="/data"
-          [ngStyle]="{'text-decoration':'none','color':'black', 'font-size':'17px'}">Data
+          [ngStyle]="{'text-decoration':'none','color':'#fea82f', 'font-size':'17px'}">Data
           Operation</a></div>
       <div *ngSwitchCase="'update'"><a routerLink="/update"
-          [ngStyle]="{'text-decoration':'none', 'color':'black', 'font-size':'17px'}">Update
+          [ngStyle]="{'text-decoration':'none', 'color':'#c67ace', 'font-size':'17px'}">Update
           Operation</a></div>
       <div *ngSwitchCase="'delete'"><a routerLink="/delete"
-          [ngStyle]="{'text-decoration':'none', 'color':'black', 'font-size':'17px'}">Delete
+          [ngStyle]="{'text-decoration':'none', 'color':'#28b5b5', 'font-size':'17px'}">Delete
           Opeation</a></div>
     </div>
   </div>
